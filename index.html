@@ -1,27 +1,126 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BelleBreeze SummerCamp 2026</title>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-<link rel="stylesheet" href="css/style.css">
+html,body{
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  font-family:'Noto Sans JP',sans-serif;
+}
 
-<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Patrick+Hand&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
-</head>
+body{
+  background:url('../S__500170754.jpg') center/cover no-repeat;
+  position:relative;
+}
 
-<body>
+/* 暗いフィルターなし */
+body::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0);
+  z-index:1;
+}
 
-<div class="cover">
+/* 全体 */
+.cover{
+  position:relative;
+  z-index:2;
+  width:100%;
+  height:100%;
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+  flex-direction:column;
+  text-align:center;
+  padding-top:55px;   /* ← 上に移動 */
+  padding-left:20px;
+  padding-right:20px;
+}
 
-  <div class="main-title">
-    <span class="small">Belle Breeze</span>
-    <span class="big">Summer</span>
-    <span class="big second">Camp</span>
-    <span class="year">2026</span>
-  </div>
+/* タイトル */
+.main-title{
+  line-height:0.88;
+  animation:fadeUp 1.4s ease forwards;
+  opacity:0;
+}
 
-</div>
+/* Belle Breeze */
+.small{
+  display:block;
+  font-size:34px;
+  color:#ffffff;
+  font-family:'Patrick Hand',cursive;
+  margin-bottom:8px;
+  transform:rotate(-2deg);
+  text-shadow:0 4px 8px rgba(0,0,0,.18);
+}
 
-</body>
-</html>
+/* Summer */
+.big{
+  display:block;
+  font-size:108px;
+  color:#ffd400;
+  font-family:'Lilita One',cursive;
+  -webkit-text-stroke:7px #ffffff;
+  text-shadow:0 8px 16px rgba(0,0,0,.14);
+  transform:rotate(-3deg);
+}
+
+/* Camp */
+.second{
+  margin-top:-14px;
+}
+
+/* 2026 */
+.year{
+  display:block;
+  margin-top:-6px;
+  font-size:60px;
+  color:#ff8a00;
+  font-family:'Lilita One',cursive;
+  -webkit-text-stroke:5px #ffffff;
+  transform:rotate(-5deg);
+}
+
+/* アニメ */
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(25px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* スマホ */
+@media screen and (max-width:768px){
+
+.cover{
+  padding-top:48px;
+}
+
+.small{
+  font-size:28px;
+}
+
+.big{
+  font-size:78px;
+  -webkit-text-stroke:5px #ffffff;
+}
+
+.second{
+  margin-top:-10px;
+}
+
+.year{
+  font-size:46px;
+  -webkit-text-stroke:4px #ffffff;
+}
+
+}
