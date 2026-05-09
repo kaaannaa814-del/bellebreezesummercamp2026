@@ -1,124 +1,27 @@
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+```html id="h7m2ka"
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BelleBreeze SummerCamp 2026</title>
 
-html,body{
-  width:100%;
-  height:100%;
-  overflow:hidden;
-  font-family:'Noto Sans JP',sans-serif;
-}
+<link rel="stylesheet" href="css/style.css">
 
-body{
-  background:url('../S__500170754.jpg') center/cover no-repeat;
-  position:relative;
-}
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Patrick+Hand&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+</head>
 
-/* フィルターなし */
-body::before{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,0);
-  z-index:1;
-}
+<body>
 
-/* 上寄せ配置 */
-.cover{
-  position:relative;
-  z-index:2;
-  width:100%;
-  height:100%;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:flex-start;
-  text-align:center;
-  padding-top:22px;
-}
+<div class="cover">
+  <div class="main-title">
+    <span class="small">Belle Breeze</span>
+    <span class="big">Summer</span>
+    <span class="big second">Camp</span>
+    <span class="year">2026</span>
+  </div>
+</div>
 
-/* タイトル全体 */
-.main-title{
-  line-height:0.82;
-  animation:fadeUp 1.2s ease forwards;
-  opacity:0;
-}
-
-/* Belle Breeze */
-.small{
-  display:block;
-  font-size:52px;
-  color:#ffffff;
-  font-family:'Caveat',cursive;
-  margin-bottom:2px;
-  transform:rotate(-2deg);
-  text-shadow:0 3px 8px rgba(0,0,0,.10);
-}
-
-/* Summer Camp */
-.big{
-  display:block;
-  font-size:170px;
-  color:#ffd400;
-  font-family:'Pacifico',cursive;
-  -webkit-text-stroke:10px #ffffff;
-  text-shadow:0 6px 14px rgba(0,0,0,.08);
-  letter-spacing:-3px;
-  transform:rotate(-3deg);
-}
-
-.second{
-  margin-top:-58px;
-}
-
-/* 2026 */
-.year{
-  display:block;
-  margin-top:-26px;
-  font-size:96px;
-  color:#ff8a00;
-  font-family:'Pacifico',cursive;
-  -webkit-text-stroke:7px #ffffff;
-  transform:rotate(-5deg);
-}
-
-/* アニメ */
-@keyframes fadeUp{
-  from{
-    opacity:0;
-    transform:translateY(20px);
-  }
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
-}
-
-/* スマホ */
-@media screen and (max-width:768px){
-
-.cover{
-  padding-top:20px;
-}
-
-.small{
-  font-size:36px;
-}
-
-.big{
-  font-size:112px;
-  -webkit-text-stroke:7px #ffffff;
-}
-
-.second{
-  margin-top:-34px;
-}
-
-.year{
-  font-size:60px;
-  -webkit-text-stroke:5px #ffffff;
-}
-
-}
+</body>
+</html>
+```
