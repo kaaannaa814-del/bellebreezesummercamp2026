@@ -4,188 +4,125 @@
   box-sizing:border-box;
 }
 
-body{
-  font-family:sans-serif;
-}
-
-/* 表紙 */
-
-.hero{
-  position:relative;
-  width:100%;
-  height:100vh;
-  overflow:hidden;
-  display:block;
-  text-decoration:none;
-}
-
-.hero img{
+html,body{
   width:100%;
   height:100%;
-  object-fit:cover;
-
-  animation:bg 2s ease;
+  overflow:hidden;
+  font-family:'Noto Sans JP',sans-serif;
 }
 
-.overlay{
+body{
+  background:url('S__500170754.jpg') center/cover no-repeat;
+  position:relative;
+}
+
+/* 背景少し暗く */
+body::before{
+  content:'';
   position:absolute;
   inset:0;
-  background:rgba(0,0,0,0.15);
+  background:rgba(0,0,0,0.18);
+  z-index:1;
 }
 
-.title{
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  text-align:center;
-  color:white;
-}
-
-.small{
-  font-size:2rem;
-
-  opacity:0;
-  animation:fadeUp 1s forwards;
-}
-
-.title h1{
-  font-size:7rem;
-  line-height:0.9;
-
-  color:#ffd400;
-  -webkit-text-stroke:8px white;
-
-  opacity:0;
-  animation:pop 1.3s forwards;
-  animation-delay:.5s;
-}
-
-.title h2{
-  font-size:4rem;
-
-  color:orange;
-  -webkit-text-stroke:5px white;
-
-  opacity:0;
-  animation:fadeUp 1s forwards;
-  animation-delay:1s;
-}
-
-.tap{
-  display:block;
-  margin-top:30px;
-  font-size:1.2rem;
-
-  animation:blink 1.5s infinite;
-}
-
-/* 目次 */
-
-.contents-page{
-  background:#fff8e8;
-  padding:40px 20px;
-}
-
-.contents-title{
-  text-align:center;
-  font-size:4rem;
-  color:#1b3c88;
-  margin-bottom:40px;
-}
-
-.menu{
+/* 全体中央 */
+.cover{
+  position:relative;
+  z-index:2;
+  width:100%;
+  height:100%;
   display:flex;
   flex-direction:column;
-  gap:25px;
-}
-
-.card{
-  background:white;
-  border-radius:30px;
-  padding:20px;
-
-  display:flex;
+  justify-content:center;
   align-items:center;
-  gap:20px;
-
-  text-decoration:none;
-  color:#1b3c88;
-
-  box-shadow:0 10px 20px rgba(0,0,0,0.08);
-
-  transition:.3s;
+  text-align:center;
+  padding:20px;
 }
 
-.card:hover{
-  transform:translateY(-5px) scale(1.02);
+/* タイトル */
+.main-title{
+  line-height:0.95;
+  animation:fadeUp 1.5s ease forwards;
+  opacity:0;
 }
 
-.card img{
-  width:120px;
-  height:120px;
-  border-radius:50%;
-  object-fit:cover;
+/* Belle Breeze */
+.small{
+  display:block;
+  font-size:34px;
+  color:#ffffff;
+  font-family:'Fredoka',sans-serif;
+  margin-bottom:8px;
+  transform:rotate(-2deg);
+  text-shadow:0 4px 10px rgba(0,0,0,.35);
 }
 
-.card span{
-  font-size:3rem;
-  font-weight:bold;
+/* Summer Camp */
+.big{
+  display:block;
+  font-size:96px;
+  font-family:'Fredoka',sans-serif;
   color:#ffd400;
+  -webkit-text-stroke:6px white;
+  text-shadow:0 8px 20px rgba(0,0,0,.28);
+  transform:rotate(-3deg);
 }
 
-.card h2{
-  font-size:2.5rem;
+/* 2026 */
+.year{
+  display:block;
+  margin-top:-10px;
+  font-size:58px;
+  color:#ff8a00;
+  font-family:'Fredoka',sans-serif;
+  -webkit-text-stroke:4px white;
+  transform:rotate(-5deg);
 }
 
-/* animation */
+/* サブコピー */
+.subcopy{
+  margin-top:18px;
+  background:white;
+  color:#2f6ed8;
+  padding:10px 20px;
+  border-radius:30px;
+  font-size:14px;
+  font-weight:700;
+  transform:rotate(-4deg);
+  box-shadow:0 6px 14px rgba(0,0,0,.15);
+}
 
+/* アニメーション */
 @keyframes fadeUp{
   from{
     opacity:0;
     transform:translateY(30px);
   }
-
   to{
     opacity:1;
     transform:translateY(0);
   }
 }
 
-@keyframes pop{
-  from{
-    opacity:0;
-    transform:scale(.6);
-  }
+/* スマホ */
+@media screen and (max-width:768px){
 
-  to{
-    opacity:1;
-    transform:scale(1);
-  }
+.small{
+  font-size:26px;
 }
 
-@keyframes bg{
-  from{
-    opacity:0;
-    transform:scale(1.1);
-  }
-
-  to{
-    opacity:1;
-    transform:scale(1);
-  }
+.big{
+  font-size:70px;
+  -webkit-text-stroke:4px white;
 }
 
-@keyframes blink{
-  0%{
-    opacity:1;
-  }
+.year{
+  font-size:42px;
+}
 
-  50%{
-    opacity:.3;
-  }
+.subcopy{
+  font-size:12px;
+  padding:8px 16px;
+}
 
-  100%{
-    opacity:1;
-  }
 }
