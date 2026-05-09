@@ -16,7 +16,7 @@ body{
   position:relative;
 }
 
-/* 暗いフィルターなし */
+/* フィルターなし */
 body::before{
   content:'';
   position:absolute;
@@ -25,64 +25,62 @@ body::before{
   z-index:1;
 }
 
-/* 全体 */
+/* 上寄せ配置 */
 .cover{
   position:relative;
   z-index:2;
   width:100%;
   height:100%;
   display:flex;
-  justify-content:flex-start;
-  align-items:center;
   flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
   text-align:center;
-  padding-top:55px;   /* ← 上に移動 */
-  padding-left:20px;
-  padding-right:20px;
+  padding-top:22px;
 }
 
-/* タイトル */
+/* タイトル全体 */
 .main-title{
-  line-height:0.88;
-  animation:fadeUp 1.4s ease forwards;
+  line-height:0.82;
+  animation:fadeUp 1.2s ease forwards;
   opacity:0;
 }
 
 /* Belle Breeze */
 .small{
   display:block;
-  font-size:34px;
+  font-size:52px;
   color:#ffffff;
-  font-family:'Patrick Hand',cursive;
-  margin-bottom:8px;
+  font-family:'Caveat',cursive;
+  margin-bottom:2px;
   transform:rotate(-2deg);
-  text-shadow:0 4px 8px rgba(0,0,0,.18);
+  text-shadow:0 3px 8px rgba(0,0,0,.10);
 }
 
-/* Summer */
+/* Summer Camp */
 .big{
   display:block;
-  font-size:108px;
+  font-size:170px;
   color:#ffd400;
-  font-family:'Lilita One',cursive;
-  -webkit-text-stroke:7px #ffffff;
-  text-shadow:0 8px 16px rgba(0,0,0,.14);
+  font-family:'Pacifico',cursive;
+  -webkit-text-stroke:10px #ffffff;
+  text-shadow:0 6px 14px rgba(0,0,0,.08);
+  letter-spacing:-3px;
   transform:rotate(-3deg);
 }
 
-/* Camp */
 .second{
-  margin-top:-14px;
+  margin-top:-58px;
 }
 
 /* 2026 */
 .year{
   display:block;
-  margin-top:-6px;
-  font-size:60px;
+  margin-top:-26px;
+  font-size:96px;
   color:#ff8a00;
-  font-family:'Lilita One',cursive;
-  -webkit-text-stroke:5px #ffffff;
+  font-family:'Pacifico',cursive;
+  -webkit-text-stroke:7px #ffffff;
   transform:rotate(-5deg);
 }
 
@@ -90,7 +88,7 @@ body::before{
 @keyframes fadeUp{
   from{
     opacity:0;
-    transform:translateY(25px);
+    transform:translateY(20px);
   }
   to{
     opacity:1;
@@ -102,25 +100,25 @@ body::before{
 @media screen and (max-width:768px){
 
 .cover{
-  padding-top:48px;
+  padding-top:20px;
 }
 
 .small{
-  font-size:28px;
+  font-size:36px;
 }
 
 .big{
-  font-size:78px;
-  -webkit-text-stroke:5px #ffffff;
+  font-size:112px;
+  -webkit-text-stroke:7px #ffffff;
 }
 
 .second{
-  margin-top:-10px;
+  margin-top:-34px;
 }
 
 .year{
-  font-size:46px;
-  -webkit-text-stroke:4px #ffffff;
+  font-size:60px;
+  -webkit-text-stroke:5px #ffffff;
 }
 
 }
