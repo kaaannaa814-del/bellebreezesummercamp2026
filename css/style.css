@@ -7,120 +7,55 @@
 html,body{
   width:100%;
   height:100%;
-  overflow:hidden;
-  font-family:'Noto Sans JP',sans-serif;
 }
 
-body{
-  /* style.css は css フォルダ内なので 1つ上に戻って画像を見る */
-  background:url('../画像ファイル名.jpg') center center / cover no-repeat;
-  position:relative;
-}
-
-/* フィルターなし */
-body::before{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:transparent;
-  z-index:1;
-}
-
-/* 上配置 */
 .cover{
+  width:100vw;
+  height:100vh;
+  min-height:100svh;
+  background:
+    linear-gradient(rgba(0,0,0,0.12),rgba(0,0,0,0.12)),
+    url("../S__500170754.jpg") center center / cover no-repeat;
   position:relative;
-  z-index:2;
-  width:100%;
-  height:100%;
-  display:flex;
-  justify-content:flex-start;
-  align-items:center;
-  flex-direction:column;
-  text-align:center;
-  padding-top:24px;
 }
 
-/* 全体 */
 .main-title{
-  line-height:0.88;
-  animation:fadeUp 1.2s ease forwards;
-  opacity:0;
+  position:absolute;
+  top:6%;
+  left:50%;
+  transform:translateX(-50%);
+  width:100%;
+  text-align:center;
+  color:#fff;
+  text-shadow:2px 4px 10px rgba(0,0,0,0.22);
 }
 
-/* Belle Breeze */
 .small{
   display:block;
-  font-size:48px;
-  color:#ffffff;
-  font-family:'Caveat',cursive;
-  font-weight:700;
-  margin-bottom:4px;
-  transform:rotate(-4deg);
-}
-
-/* Summer Camp */
-.big{
-  display:block;
-  font-size:148px;
-  color:#ffd400;
-  font-family:'Chewy',cursive;
-  -webkit-text-stroke:8px #ffffff;
-  text-shadow:0 4px 10px rgba(0,0,0,.08);
+  font-family:'Playlist Script', cursive;
+  font-size:clamp(2.5rem,8vw,5rem);
+  margin-bottom:-15px;
   transform:rotate(-3deg);
 }
 
-.second{
-  margin-top:-38px;
-  transform:rotate(2deg);
+.big{
+  display:block;
+  font-family:'Montserrat', sans-serif;
+  font-size:clamp(4.3rem,18vw,9rem);
+  font-weight:800;
+  letter-spacing:-4px;
+  line-height:0.88;
+  text-transform:uppercase;
 }
 
-/* 2026 */
+.big.second{
+  margin-top:-12px;
+}
+
 .year{
   display:block;
-  margin-top:-12px;
-  font-size:72px;
-  color:#ff8a00;
-  font-family:'Caveat',cursive;
-  font-weight:700;
-  -webkit-text-stroke:3px #ffffff;
-  transform:rotate(-6deg);
-}
-
-/* アニメ */
-@keyframes fadeUp{
-  from{
-    opacity:0;
-    transform:translateY(20px);
-  }
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
-}
-
-/* スマホ */
-@media screen and (max-width:768px){
-
-.cover{
-  padding-top:20px;
-}
-
-.small{
-  font-size:36px;
-}
-
-.big{
-  font-size:105px;
-  -webkit-text-stroke:6px #ffffff;
-}
-
-.second{
-  margin-top:-24px;
-}
-
-.year{
-  font-size:52px;
-  -webkit-text-stroke:2px #ffffff;
-}
-
+  font-family:'Playlist Script', cursive;
+  font-size:clamp(2.4rem,8vw,4.8rem);
+  margin-top:-10px;
+  transform:rotate(2deg);
 }
