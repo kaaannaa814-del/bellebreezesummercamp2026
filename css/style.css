@@ -1,72 +1,122 @@
-/* 全体 - 少し左に全体を傾けて動きを出す */
-.main-title {
-  line-height: 0.88;
-  animation: fadeUp 1.2s ease forwards;
-  opacity: 0;
-  transform: rotate(-3deg); /* 全体をまとめて少し傾ける */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-/* Belle Breeze - 白い光沢感を意識 */
-.small {
-  display: block;
-  font-size: 42px;
-  color: #ffffff;
-  font-family: 'Patrick Hand', cursive;
-  margin-bottom: -15px; /* 下の文字に少し被せる */
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+html,body{
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  font-family:'Noto Sans JP',sans-serif;
 }
 
-/* Summer Camp 共通 - 縁取り + オレンジの立体影を追加 */
-.big {
-  display: block;
-  font-size: 150px;
-  color: #ffd400;
-  font-family: 'Lilita One', cursive;
-  /* 縁取り */
-  -webkit-text-stroke: 10px #ffffff;
-  /* 
-     text-shadowを使ってオレンジの影を作る 
-     1つ目〜4つ目は縁取りの補強、最後の一つが右下のオレンジの影
-  */
-  text-shadow: 
-    -1px -1px 0 #fff,
-     1px -1px 0 #fff,
-    -1px  1px 0 #fff,
-     1px  1px 0 #fff,
-     8px  8px 0 #ff8a00; /* ここでオレンジの立体感を出す */
-  paint-order: stroke fill; /* 縁取りが文字の内側を侵食しないように設定 */
+body{
+  background:url('../S__500170754.jpg') center/cover no-repeat;
+  position:relative;
 }
 
-.second {
-  margin-top: -55px; /* さらに重ねてロゴっぽく */
-  margin-left: 20px; /* 少し右にずらすとバランスが良い */
+/* フィルターなし */
+body::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:transparent;
+  z-index:1;
 }
 
-/* 2026 - Summerたちとは少し違う傾きに */
-.year {
-  display: inline-block; /* rotateを効かせるため */
-  margin-top: -20px;
-  font-size: 92px;
-  color: #ffffff; /* 文字自体は白 */
-  background-color: #ff8a00; /* 背景をオレンジに */
-  padding: 0 15px;
-  border-radius: 8px;
-  font-family: 'Lilita One', cursive;
-  transform: rotate(5deg); /* ここだけ逆方向に傾ける */
-  box-shadow: 5px 5px 0px #fff; /* 白い影をつけて浮かせる */
+/* 上配置 */
+.cover{
+  position:relative;
+  z-index:2;
+  width:100%;
+  height:100%;
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+  flex-direction:column;
+  text-align:center;
+  padding-top:24px;
 }
 
-/* スマホ用調整 */
+/* 全体 */
+.main-title{
+  line-height:0.88;
+  animation:fadeUp 1.2s ease forwards;
+  opacity:0;
+}
+
+/* Belle Breeze */
+.small{
+  display:block;
+  font-size:42px;
+  color:#ffffff;
+  font-family:'Patrick Hand',cursive;
+  margin-bottom:2px;
+  transform:rotate(-2deg);
+}
+
+/* Summer Camp */
+.big{
+  display:block;
+  font-size:150px;
+  color:#ffd400;
+  font-family:'Lilita One',cursive;
+  -webkit-text-stroke:9px #ffffff;
+  text-shadow:0 4px 10px rgba(0,0,0,.08);
+  transform:rotate(-3deg);
+}
+
+.second{
+  margin-top:-42px;
+}
+
+/* 2026 */
+.year{
+  display:block;
+  margin-top:-14px;
+  font-size:82px;
+  color:#ff8a00;
+  font-family:'Lilita One',cursive;
+  -webkit-text-stroke:6px #ffffff;
+  transform:rotate(-5deg);
+}
+
+/* アニメ */
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* スマホ */
 @media screen and (max-width:768px){
-  .big {
-    font-size: 100px;
-    -webkit-text-stroke: 7px #ffffff;
-    text-shadow: 6px 6px 0 #ff8a00;
-  }
-  .second {
-    margin-top: -35px;
-  }
-  .year {
-    font-size: 60px;
-  }
+
+.cover{
+  padding-top:20px;
+}
+
+.small{
+  font-size:32px;
+}
+
+.big{
+  font-size:108px;
+  -webkit-text-stroke:7px #ffffff;
+}
+
+.second{
+  margin-top:-28px;
+}
+
+.year{
+  font-size:58px;
+  -webkit-text-stroke:5px #ffffff;
+}
+
 }
