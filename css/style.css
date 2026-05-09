@@ -21,27 +21,27 @@ body::before{
   content:'';
   position:absolute;
   inset:0;
-  background:rgba(0,0,0,0);
+  background:transparent;
   z-index:1;
 }
 
-/* 上寄せ配置 */
+/* 上配置 */
 .cover{
   position:relative;
   z-index:2;
   width:100%;
   height:100%;
   display:flex;
-  flex-direction:column;
-  align-items:center;
   justify-content:flex-start;
+  align-items:center;
+  flex-direction:column;
   text-align:center;
-  padding-top:22px;
+  padding-top:24px;
 }
 
-/* タイトル全体 */
+/* 全体 */
 .main-title{
-  line-height:0.82;
+  line-height:0.88;
   animation:fadeUp 1.2s ease forwards;
   opacity:0;
 }
@@ -49,38 +49,36 @@ body::before{
 /* Belle Breeze */
 .small{
   display:block;
-  font-size:52px;
+  font-size:42px;
   color:#ffffff;
-  font-family:'Caveat',cursive;
+  font-family:'Patrick Hand',cursive;
   margin-bottom:2px;
   transform:rotate(-2deg);
-  text-shadow:0 3px 8px rgba(0,0,0,.10);
 }
 
 /* Summer Camp */
 .big{
   display:block;
-  font-size:170px;
+  font-size:150px;
   color:#ffd400;
-  font-family:'Pacifico',cursive;
-  -webkit-text-stroke:10px #ffffff;
-  text-shadow:0 6px 14px rgba(0,0,0,.08);
-  letter-spacing:-3px;
+  font-family:'Lilita One',cursive;
+  -webkit-text-stroke:9px #ffffff;
+  text-shadow:0 4px 10px rgba(0,0,0,.08);
   transform:rotate(-3deg);
 }
 
 .second{
-  margin-top:-58px;
+  margin-top:-42px;
 }
 
 /* 2026 */
 .year{
   display:block;
-  margin-top:-26px;
-  font-size:96px;
+  margin-top:-14px;
+  font-size:82px;
   color:#ff8a00;
-  font-family:'Pacifico',cursive;
-  -webkit-text-stroke:7px #ffffff;
+  font-family:'Lilita One',cursive;
+  -webkit-text-stroke:6px #ffffff;
   transform:rotate(-5deg);
 }
 
@@ -104,20 +102,20 @@ body::before{
 }
 
 .small{
-  font-size:36px;
+  font-size:32px;
 }
 
 .big{
-  font-size:112px;
+  font-size:108px;
   -webkit-text-stroke:7px #ffffff;
 }
 
 .second{
-  margin-top:-34px;
+  margin-top:-28px;
 }
 
 .year{
-  font-size:60px;
+  font-size:58px;
   -webkit-text-stroke:5px #ffffff;
 }
 
