@@ -12,7 +12,8 @@ html,body{
 }
 
 body{
-  background:url('../S__500170754.jpg') center/cover no-repeat;
+  /* style.css は css フォルダ内なので 1つ上に戻って画像を見る */
+  background:url('../画像ファイル名.jpg') center center / cover no-repeat;
   position:relative;
 }
 
@@ -49,37 +50,40 @@ body::before{
 /* Belle Breeze */
 .small{
   display:block;
-  font-size:42px;
+  font-size:48px;
   color:#ffffff;
-  font-family:'Patrick Hand',cursive;
-  margin-bottom:2px;
-  transform:rotate(-2deg);
+  font-family:'Caveat',cursive;
+  font-weight:700;
+  margin-bottom:4px;
+  transform:rotate(-4deg);
 }
 
 /* Summer Camp */
 .big{
   display:block;
-  font-size:150px;
+  font-size:148px;
   color:#ffd400;
-  font-family:'Lilita One',cursive;
-  -webkit-text-stroke:9px #ffffff;
+  font-family:'Chewy',cursive;
+  -webkit-text-stroke:8px #ffffff;
   text-shadow:0 4px 10px rgba(0,0,0,.08);
   transform:rotate(-3deg);
 }
 
 .second{
-  margin-top:-42px;
+  margin-top:-38px;
+  transform:rotate(2deg);
 }
 
 /* 2026 */
 .year{
   display:block;
-  margin-top:-14px;
-  font-size:82px;
+  margin-top:-12px;
+  font-size:72px;
   color:#ff8a00;
-  font-family:'Lilita One',cursive;
-  -webkit-text-stroke:6px #ffffff;
-  transform:rotate(-5deg);
+  font-family:'Caveat',cursive;
+  font-weight:700;
+  -webkit-text-stroke:3px #ffffff;
+  transform:rotate(-6deg);
 }
 
 /* アニメ */
@@ -102,21 +106,21 @@ body::before{
 }
 
 .small{
-  font-size:32px;
+  font-size:36px;
 }
 
 .big{
-  font-size:108px;
-  -webkit-text-stroke:7px #ffffff;
+  font-size:105px;
+  -webkit-text-stroke:6px #ffffff;
 }
 
 .second{
-  margin-top:-28px;
+  margin-top:-24px;
 }
 
 .year{
-  font-size:58px;
-  -webkit-text-stroke:5px #ffffff;
+  font-size:52px;
+  -webkit-text-stroke:2px #ffffff;
 }
 
 }
