@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BelleBreeze SummerCamp 2026</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
 *{
@@ -26,81 +26,99 @@ body{
   position:relative;
 }
 
-/* 少し暗く */
+/* 背景を少し暗く */
 body::before{
   content:'';
   position:absolute;
   inset:0;
-  background:rgba(0,0,0,0.28);
+  background:rgba(0,0,0,0.18);
   z-index:1;
 }
 
-/* 全体 */
+/* 全体中央配置 */
 .cover{
   position:relative;
   z-index:2;
   width:100%;
   height:100%;
   display:flex;
-  align-items:center;
-  justify-content:center;
   flex-direction:column;
+  justify-content:center;
+  align-items:center;
   text-align:center;
+  padding:20px;
 }
 
-/* タイトル */
+/* タイトル全体 */
 .main-title{
-  color:#f6d76b;
-  font-family:'Playfair Display',serif;
-  line-height:1.05;
-  text-shadow:
-    0 0 10px rgba(246,215,107,0.25),
-    0 4px 18px rgba(0,0,0,0.35);
-
-  animation:
-    fadeUp 1.8s ease forwards,
-    glow 4s ease-in-out infinite;
-
+  line-height:0.95;
+  animation:fadeUp 1.5s ease forwards;
   opacity:0;
 }
 
+/* Belle Breeze */
 .main-title .small{
   display:block;
-  font-size:28px;
-  letter-spacing:5px;
+  font-size:34px;
+  color:#ffffff;
+  font-family:'Fredoka',sans-serif;
   margin-bottom:8px;
-  font-weight:500;
+  transform:rotate(-2deg);
+  text-shadow:0 4px 10px rgba(0,0,0,.35);
 }
 
+/* Summer Camp */
 .main-title .big{
   display:block;
-  font-size:76px;
-  letter-spacing:1px;
+  font-size:96px;
+  font-family:'Fredoka',sans-serif;
+  color:#ffd400;
+  -webkit-text-stroke:6px white;
+  text-shadow:0 8px 20px rgba(0,0,0,.28);
+  transform:rotate(-3deg);
 }
 
+/* 2026 */
 .main-title .year{
   display:block;
-  margin-top:12px;
-  font-size:42px;
-  letter-spacing:6px;
+  margin-top:-10px;
+  font-size:58px;
+  color:#ff8a00;
+  font-family:'Fredoka',sans-serif;
+  -webkit-text-stroke:4px white;
+  transform:rotate(-5deg);
 }
 
-/* タップ文字 */
+/* サブコピー */
+.subcopy{
+  margin-top:26px;
+  background:white;
+  color:#2f6ed8;
+  padding:10px 20px;
+  border-radius:30px;
+  font-size:14px;
+  font-weight:700;
+  transform:rotate(-4deg);
+  box-shadow:0 6px 14px rgba(0,0,0,.15);
+}
+
+/* TAP */
 .tap{
-  margin-top:40px;
-  color:rgba(255,255,255,0.9);
+  margin-top:34px;
+  color:white;
   font-size:13px;
   letter-spacing:4px;
   animation:fade 2s infinite;
 }
 
-/* 下の線 */
+/* 線 */
 .line{
-  width:120px;
-  height:1px;
-  background:rgba(255,255,255,0.7);
-  margin-top:18px;
-  animation:lineMove 1.8s ease;
+  width:130px;
+  height:2px;
+  background:rgba(255,255,255,.8);
+  margin-top:14px;
+  border-radius:10px;
+  animation:lineMove 1.5s ease;
 }
 
 /* アニメーション */
@@ -115,27 +133,9 @@ body::before{
   }
 }
 
-@keyframes glow{
-  0%,100%{
-    text-shadow:
-      0 0 8px rgba(246,215,107,0.2),
-      0 4px 18px rgba(0,0,0,0.35);
-  }
-
-  50%{
-    text-shadow:
-      0 0 18px rgba(246,215,107,0.45),
-      0 4px 24px rgba(0,0,0,0.45);
-  }
-}
-
 @keyframes fade{
-  0%,100%{
-    opacity:1;
-  }
-  50%{
-    opacity:0.35;
-  }
+  0%,100%{opacity:1;}
+  50%{opacity:.35;}
 }
 
 @keyframes lineMove{
@@ -144,7 +144,7 @@ body::before{
     opacity:0;
   }
   to{
-    width:120px;
+    width:130px;
     opacity:1;
   }
 }
@@ -152,17 +152,23 @@ body::before{
 /* スマホ */
 @media screen and (max-width:768px){
 
-  .main-title .small{
-    font-size:20px;
-  }
+.main-title .small{
+  font-size:26px;
+}
 
-  .main-title .big{
-    font-size:52px;
-  }
+.main-title .big{
+  font-size:70px;
+  -webkit-text-stroke:4px white;
+}
 
-  .main-title .year{
-    font-size:30px;
-  }
+.main-title .year{
+  font-size:42px;
+}
+
+.subcopy{
+  font-size:12px;
+  padding:8px 16px;
+}
 
 }
 </style>
@@ -173,10 +179,12 @@ body::before{
 <div class="cover">
 
   <div class="main-title">
-    <span class="small">BelleBreeze</span>
-    <span class="big">SummerCamp</span>
+    <span class="small">Belle Breeze</span>
+    <span class="big">Summer Camp</span>
     <span class="year">2026</span>
   </div>
+
+  <div class="subcopy">Let's make the best memories!</div>
 
   <div class="tap">TAP TO START</div>
 
