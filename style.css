@@ -12,20 +12,26 @@ body, html {
     font-family: 'Noto Serif JP', serif;
 }
 
-/* 画面全体と背景画像の設定 */
+/* 画面全体と背景画像の設定（ここが一番重要です！） */
 .hero-container {
     position: relative;
     width: 100vw;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    /* 背景画像設定（GitHubのファイル名と完全に一致させています） */
+    
+    /* ▼▼▼ この記述だけで背景を管理します ▼▼▼ */
+    /* GitHubのファイル名（スペースなし・すべて小文字）に合わせる */
     background-image: url("sc81215.jpg");
+    
+    /* 画面を覆い尽くす設定 */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    /* ▲▲▲ 記述終了 ▲▲▲ */
+
+    /* 文字を中央に寄せるための設定 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* 文字エリアの設定 */
@@ -38,14 +44,13 @@ body, html {
     padding: 20px;
 }
 
-/* アニメーションの共通設定 */
+/* アニメーション設定（変更なし） */
 .animated-item {
     opacity: 0;
     transform: translateY(30px);
     animation: fadeInUp 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-/* 下からふわっと浮かび上がるアニメーション */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -57,7 +62,7 @@ body, html {
     }
 }
 
-/* "BelleBreeze" スタイル */
+/* 文字スタイル（変更なし） */
 .logo-area {
     font-size: 1.8rem;
     letter-spacing: 2px;
@@ -65,7 +70,6 @@ body, html {
     font-weight: bold;
 }
 
-/* "Summer Camp 2026" スタイル */
 .main-title {
     font-family: 'Caveat', cursive;
     font-size: 6rem;
@@ -83,18 +87,7 @@ body, html {
     margin-left: 10px;
 }
 
-/* スマホ用のサイズ調整 */
 @media (max-width: 768px) {
-    .logo-area {
-        font-size: 1.2rem;
-    }
-    .main-title {
-        font-size: 4rem;
-    }
-    .sub-title {
-        font-size: 3.5rem;
-    }
-    .year {
-        font-size: 3rem;
-    }
+    .main-title { font-size: 4rem; }
+    .sub-title { font-size: 3.5rem; }
 }
