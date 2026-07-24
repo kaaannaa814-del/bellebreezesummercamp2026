@@ -1,25 +1,57 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BelleBreeze SummerCamp 2026</title>
-
-<link rel="stylesheet" href="css/style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@600&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BelleBreeze Summer Camp 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts などでフォントを指定（例） -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<div class="cover">
-  <div class="main-title">
-    <span class="small">Belle Breeze</span>
-    <span class="big">Summer</span>
-    <span class="big second">Camp</span>
-    <span class="year">2026</span>
-  </div>
-</div>
+    <div class="hero-container">
+        <!-- 1枚目の背景画像 (文字なし) -->
+        <img src="image_2.png" alt="テニスコートの風景" class="background-image">
+
+        <!-- 浮かび上がらせるコンテンツのグループ -->
+        <div class="content-overlay">
+
+            <!-- "BelleBreeze" ロゴエリア -->
+            <div class="logo-area animated-item" style="animation-delay: 0.2s;">
+                <span class="logo-text">BelleBreeze</span>
+                <span class="logo-line">──</span>
+            </div>
+
+            <!-- "Summer Camp 2026" タイトル -->
+            <div class="title-area">
+                <h1 class="main-title animated-item" style="animation-delay: 0.6s;">Summer</h1>
+                <h1 class="main-title sub-title animated-item" style="animation-delay: 1.0s;">
+                    Camp<span class="year">2026</span>
+                </h1>
+                <!-- 下線の装飾線 -->
+                <div class="underline-svg animated-item" style="animation-delay: 1.4s;">
+                    <!-- ここに image_3.png の下線部分をSVGなどで配置 -->
+                    <!-- <img src="underline.svg" alt=""> -->
+                </div>
+            </div>
+
+            <!-- カわうそのキャラクター -->
+            <div class="otter-character animated-item" style="animation-delay: 1.8s;">
+                <!-- ここに image_3.png のかわうそ画像を配置 -->
+                <!-- <img src="otter.png" alt="カワウソ"> -->
+            </div>
+
+            <!-- 手書き風のキラキラ装飾 -->
+            <div class="sparkles-decor animated-item" style="animation-delay: 2.2s;">
+                <!-- ここに image_3.png の手書きキラキラ画像を配置 -->
+                <!-- <img src="sparkles.png" alt="キラキラ装飾"> -->
+            </div>
+
+        </div>
+    </div>
 
 </body>
 </html>
