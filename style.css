@@ -1,0 +1,151 @@
+/* ベーススタイル */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* 画面外の要素を隠す */
+    font-family: 'Noto Serif JP', serif; /* 基本フォント */
+}
+
+/* ヒーローエリア（画像と文字を重ねる親要素） */
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* 画面いっぱいの高さ */
+    overflow: hidden;
+}
+
+/* 1枚目の背景画像 */
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 画像のアスペクト比を保ちつつエリア全体を覆う */
+    z-index: 1; /* 一番下に配置 */
+}
+
+/* 文字を重ねるレイヤー */
+.content-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2; /* 背景画像の上に配置 */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 横方向中央揃え */
+    justify-content: center; /* 縦方向中央揃え（必要に応じて調整） */
+    color: white; /* 基本的な文字色 */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* 文字の可読性を上げるための影 */
+}
+
+/* アニメーションの共通設定 */
+.animated-item {
+    opacity: 0; /* 最初は透明 */
+    transform: translateY(20px); /* 少し下に配置 */
+    animation: fadeInUp 1s ease-out forwards; /* アニメーション適用 */
+}
+
+/* 浮き上がるアニメーションの定義 */
+@keyframes fadeInUp {
+    to {
+        opacity: 1; /* 完全に表示 */
+        transform: translateY(0); /* 元の位置に戻る */
+    }
+}
+
+/* --- 各要素の個別スタイル（image_3.pngに寄せる） --- */
+
+/* "BelleBreeze" ロゴ */
+.logo-area {
+    position: absolute;
+    top: 15%; /* 上からの位置 */
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.logo-text {
+    font-weight: bold;
+}
+.logo-line {
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+/* "Summer Camp 2026" タイトル */
+.title-area {
+    position: absolute;
+    top: 25%; /* 上からの位置 */
+    text-align: center;
+}
+
+.main-title {
+    margin: 0;
+    font-size: 5rem; /* 大きく */
+    font-family: 'Caveat', cursive; /* 手書き風フォント（例） */
+    line-height: 1.1;
+    color: white;
+}
+.sub-title {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 10px;
+}
+.year {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* タイトルの下線 */
+.underline-svg {
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%; /* 幅を調整 */
+    height: 10px;
+    /* ここに下線画像を配置する場合のスタイル */
+    /* background-image: url('underline.svg'); */
+    /* background-size: contain; */
+    /* background-repeat: no-repeat; */
+}
+
+/* カわうそのキャラクター（プレースホルダー） */
+.otter-character {
+    position: absolute;
+    bottom: 5%; /* 下からの位置 */
+    left: 10%; /* 左からの位置 */
+    width: 150px;
+    height: 150px;
+    /* 画像を配置するためのスタイル */
+    /* background-image: url('otter.png'); */
+    /* background-size: contain; */
+    /* background-repeat: no-repeat; */
+    border: 2px dashed rgba(255,255,255,0.5); /* プレースホルダーの枠 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.otter-character::after {
+    content: 'カワウソ画像';
+    font-size: 0.8rem;
+}
+
+/* キラキラ装飾（プレースホルダー） */
+.sparkles-decor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* 画像を配置するためのスタイル */
+    /* background-image: url('sparkles.png'); */
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+    /* background-position: center; */
+}
